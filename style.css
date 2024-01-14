@@ -1,0 +1,164 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "head head head"
+    "side content content"
+    "foot foot foot"
+    "last last last";
+  grid-template-rows: 100px auto 200px;
+  overflow-x: hidden;
+}
+.header {
+  grid-area: head;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+.header ul{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  flex-direction: row;
+  grid-gap: 50px;
+  list-style: none;
+}
+.header ul li{
+  text-align: center;
+  height: 50px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid pink;
+  box-shadow: 5px 5px 5px pink;
+  transition: 0.4s all;
+}
+.header ul li:hover{
+  box-shadow: 2px 2px 2px pink;
+  background: pink;
+}
+.header ul li a{
+  text-decoration: none;
+  color: red;
+  font-weight: 1000;
+  font-size: 20px;
+  font-family: monospace;
+}
+.header .logo{
+  font-size: 40px;
+  font-weight: 1000;
+  text-transform: uppercase;
+  color: red;
+  font-family: cursive;
+  text-shadow: 5px 5px 5px pink;
+}
+
+.slide {
+  grid-area: side;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: pink;
+  background-image: url(love.png);
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 800px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  width: 1248px;
+/*  align-items: center;*/
+  justify-content: center;
+  grid-area: content;
+  background: pink;
+  font-family: cursive;
+  grid-gap: 50px;
+}
+.content h1{
+  color: red;
+  font-size: 50px;
+  padding: 0 20px 30px 0;
+  text-shadow: 5px 5px 5px white;
+}
+.content p{
+  width: 80%;
+  font-size: 22px;
+  color: white;
+  text-shadow: 2px 2px 3px white;
+}
+.content .btn{
+  width: 150px;
+  background: red;
+  text-align-last: center;
+  border: white;
+  font-size: 20px;
+  font-weight: 1000;
+  color: white;
+  cursor: pointer;
+  padding: 20px;
+  border: 5px solid white;
+  box-shadow: 10px 10px 10px red;
+}
+.footer{
+  grid-area: foot;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  grid-gap: 20%;
+  justify-content: center;
+  background: white;
+  height: 450px;
+  flex-direction: column;
+  padding: 50px;
+}
+.footer .f_div1{
+  font-family: monospace;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+
+}
+.footer .f_div1 ul{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  grid-gap:20px;
+}
+.footer .f_div1 ul li a{
+  text-decoration: none;
+  font-family: monospace;
+  font-size: 20px;
+  color: red;
+}
+.last-div{
+  height: 100px;
+  width: 100%;
+  font-size: 20px;
+  
+  color: white;
+  background: pink;
+  font-family: monospace;
+  grid-area: last;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
